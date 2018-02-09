@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://togetherjs.com/togetherjs-min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link href="jquery.highlight-within-textarea.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Droid+Sans+Mono" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<script src="jquery.highlight-within-textarea.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<div style="width:100%; height:80px; color:black; background-color: grey;">
+				<p style="padding-top:20px;padding-left:30px;font-size:30px;color:white;font-family:monospace">Doknosis</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row entry-row">
+				<div class="col-md-12">
+					<h1 class="header">Patient History</h1>
+				</div>
+				<div class="col-md-12">
+					<textarea class="text-box" placeholder="Enter patient history here."></textarea>	
+				</div>
+			</div>
+			<div class="row entry-row">
+				<div class="col-md-12">
+					<h1 class="header">Subjective</h1>
+				</div>
+				<div class="col-md-12">
+					<textarea class="text-box" placeholder="Enter subjective patient information here."></textarea>	
+				</div>
+			</div>
+			<div class="row entry-row">
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+					<h1 class="header">Objective</h1>
+				</div>
+				<div class="col-md-4 pull-right">
+					<img src="../microphone.png" style="float:right;">
+				</div>
+				<div class="col-md-12">
+					<textarea class="text-box" placeholder="Enter objective patient information here." id="objective"></textarea>	
+				</div>
+			</div>
+			<div class="row entry-row">
+				<h1 class="header">Assessment</h1>
+				<div class="col-md-12">
+					<table class="disease-table" id="disease-table">
+						<!--<tr class="disease-row">
+							<td class="disease-table-entry">Influenza</td>
+							<td class="disease-table-entry">Score: 3.7</td>
+							<td class="disease-table-entry">
+								<button class="drop-button" id="btn-1">Dropdown</button>
+							</td>
+						</tr>
+						<tr class="disease-info" id="info-1">
+							<td colspan="100%" class="disease-table-entry">Flu</td>
+						</tr>
+						<tr class="disease-row">
+							<td class="disease-table-entry">Malaria</td>
+							<td class="disease-table-entry">Score: 3.2</td>
+							<td class="disease-table-entry">
+								<button class="drop-button" id="btn-2">Dropdown</button>
+							</td>
+						</tr>
+						<tr class="disease-info" id="info-2">
+							<td colspan="100%" class="disease-table-entry">Flu</td>
+						</tr>
+						<tr class="disease-row">
+							<td class="disease-table-entry">Food Poisoning</td>
+							<td class="disease-table-entry">Score: 2.7</td>
+							<td class="disease-table-entry">
+								<button class="drop-button" id="btn-3">Dropdown</button>
+							</td>
+							<tr class="disease-info" id="info-3">
+								<td colspan="100%" class="disease-table-entry">Flu</td>
+							</tr>
+						</tr>-->
+					</table>
+				</div>
+			</div>
+			<div class="container" style="margin-top: 30px;">
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-md-3">
+						<input id="input-disease" placeholder="Enter Disease here">
+					</div>
+					<div class="col-md-3">
+						<button id="add-disease">Add Disease</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="row entry-row">
+				<div class="col-md-12">
+					<h1 class="header">Plan</h1>
+				</div>
+				<div class="col-md-12">
+					<textarea class="text-box" placeholder="Enter patient plan here."></textarea>	
+				</div>
+			</div>
+		</div>
+		<button onclick="TogetherJS(this); return false;">Start TogetherJS</button>
+		<script src="autosize.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
