@@ -40,7 +40,13 @@ $('.text-box').highlightWithinTextarea({
 var words = ['fever', 'cough', 'coughing',  'migraine', 'fatigue', 'nausea', 'vommiting', 'stiff neck', 'tumor', 'sweating', 'chills', 'aches', 'shortness of breath', 'chest congestions', 'congestions', 'mucus', 'asthma'];
 
 $('.text-box').highlightWithinTextarea({
-    highlight: words
+     highlight: words
+ });
+ 
+//$('.text-box').highlightWithinTextarea('update');
+setInterval(function() { 
+  updateArray();
+  $('.text-box').highlightWithinTextarea('update');
 });
 
 var table = document.getElementById("disease-table");
