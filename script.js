@@ -4,11 +4,11 @@ var textBoxes = document.getElementsByClassName("text-box")
 console.log("hello");
 console.log(textBoxes);
 for(var i = 0; i < textBoxes.length; i++) {
-	var textBox = textBoxes[i];
-	textBox.oninput = function() {
-		textBox.style.height = "";
-		textBox.style.height = Math.min(textBox.scrollHeight, 300) + "px";
-	};
+  var textBox = textBoxes[i];
+  textBox.oninput = function() {
+    textBox.style.height = "";
+    textBox.style.height = Math.min(textBox.scrollHeight, 300) + "px";
+  };
 }*/
 /*var ta = document.querySelectorAll('textarea');
 autosize(ta);
@@ -37,7 +37,7 @@ $('.text-box').highlightWithinTextarea({
 });
 */
 
-var words = ['fever', 'cough', 'migraine', 'fatigue', 'nausea', 'vommiting', 'stiff neck', 'tumor', 'sweating', 'chills'];
+var words = ['fever', 'cough', 'coughing',  'migraine', 'fatigue', 'nausea', 'vommiting', 'stiff neck', 'tumor', 'sweating', 'chills', 'aches', 'shortness of breath', 'chest congestions', 'congestions', 'mucus', 'asthma'];
 
 $('.text-box').highlightWithinTextarea({
     highlight: words
@@ -53,36 +53,57 @@ text.addEventListener("click", updateArray);
 addDiseaseButton.addEventListener("click", addDisease);
 
 var flu = {
-  "name" : "flu",
+  "name" : "Flu",
   "symptoms": {"fever" : 2, "cough" : 1, "migraine" : 1, "fatigue" : 2},
   "score" : 0
 };
 
 var foodPoisoning = {
-  "name" : "food poisoning",
+  "name" : "Food poisoning",
   "symptoms": {"fever" : 1, "nausea" : 0.5, "vommiting" : 3, "fatigue" : 2},
   "score" : 0
 };
 
 var meningitis = {
-  "name" : "meningitis",
+  "name" : "Meningitis",
   "symptoms": {"fever" : 2, "cough" : 1, "stiff neck" : 3, "fatigue" : 1},
   "score" : 0
 };
 
 var cancer = {
-  "name" : "cancer",
+  "name" : "Cancer",
   "symptoms": {"tumor" : 4, "fever" : 1, "migraine" : 1, "fatigue" : 2},
   "score" : 0
 };
 
 var typhoid = {
-  "name" : "typhoid",
+  "name" : "Typhoid",
   "symptoms": {"fever" : 3, "sweating" : 1, "chills" : 2, "vommiting" : 1},
   "score" : 0
 };
 
-var diseases = [flu, foodPoisoning, meningitis, cancer, typhoid];
+var pneumonia = {
+  "name" : "Pneumonia",
+  "symptoms": {"fever" : 3, "migraine" : 1, "aches" : 2, "fatigue" : 2, "coughing" : 1, "congestions" : 2, "mucus" : 2, "asthma" : 2}
+}
+
+var lowerResp = {
+  "name" : "Lower Respitory Infection",
+  "symptoms" : {"fever": 1, "cough": 2, "congestions": 2, "shortness of breath":2, "migraine": 1, "aches": 1}
+}
+
+var acuteBronchitis = {
+  "name" : "Acute Bronchitis",
+  "symptoms" : {"fever": 1, "cough": 2, "congestions": 3, "shortness of breath":2, "migraine": 1, "aches": 2, "fatigue" : 2}
+}
+
+var chronicBronchitis = {
+  "name" : "Chronic Bronchitis",
+  "symptoms" : {"fever": 1, "cough": 2, "congestions": 3, "shortness of breath":2, "migraine": 1, "aches": 2, "fatigue" : 2}
+}
+
+var bronchitis
+var diseases = [flu, foodPoisoning, meningitis, cancer, typhoid, pneumonia, lowerResp, acuteBronchitis, chronicBronchitis];
 var listOfEntries = [];
 var userEntries = []
 var userEntriesNum = 0;

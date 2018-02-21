@@ -3,6 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script>
+			TogetherJSConfig_dontShowClicks = true;
+		</script>
 		<script src="https://togetherjs.com/togetherjs-min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link href="jquery.highlight-within-textarea.css" rel="stylesheet">
@@ -42,7 +45,7 @@
 					<h1 class="header">Objective</h1>
 				</div>
 				<div class="col-md-4 pull-right">
-					<img src="../microphone.png" style="float:right;">
+					<img src="microphone.png" style="float:right;">
 				</div>
 				<div class="col-md-12">
 					<textarea class="text-box" placeholder="Enter objective patient information here." id="objective"></textarea>	
@@ -105,9 +108,15 @@
 					<textarea class="text-box" placeholder="Enter patient plan here."></textarea>	
 				</div>
 			</div>
+
+			<div class="row ehr-row">
+				<button class="ehr-button" id="ehr-button">Link To EHR</button>
+			</div>
 		</div>
-		<button onclick="TogetherJS(this); return false;">Start TogetherJS</button>
+		<button onclick="TogetherJS(this); return false;" id="togetherButton">Start TogetherJS</button>
+		<button id="endTogether">Hide TogetherJS</button>
 		<script src="autosize.js"></script>
 		<script src="script.js"></script>
+		<script src="customTogetherScript.js"></script>
 	</body>
 </html>
